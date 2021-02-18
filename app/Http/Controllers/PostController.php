@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
-class ResourceController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,9 @@ class ResourceController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $posts = Post::all();
+
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -23,7 +26,7 @@ class ResourceController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -34,7 +37,7 @@ class ResourceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd('ciao',$request);
     }
 
     /**

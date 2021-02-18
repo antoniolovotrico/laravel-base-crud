@@ -17,9 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('posts' ,'ResourceController@index');
 
-Route::get('posts/create' , 'ResourceController@create');
 
 // Resource Route Controller
-Route::resource('posts', 'ResourceController');
+Route::resource('posts', 'PostController');
