@@ -63,12 +63,17 @@ body main table .title {
 }
 
 body main table .body {
-  width: 55%;
+  width: 50%;
   padding: 10px;
 }
 
 body main table .created {
-  width: 15%;
+  width: 10%;
+  padding: 10px;
+}
+
+body main table .created {
+  width: 10%;
   padding: 10px;
 }
 
@@ -81,6 +86,10 @@ body main table .action {
 
 body main table .action button {
   padding: 8px;
+}
+
+body main table .action form {
+  width: 25%;
 }
 
 body main form {

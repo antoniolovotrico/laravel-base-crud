@@ -11,6 +11,7 @@ Blog
             <th class="title">Title</th>
             <th class="body">Body</th>
             <th class="created">Created</th>
+            <th class="updated">Update</th>
             <th class="action">Action</th>
         </tr>
     </thead>
@@ -21,6 +22,7 @@ Blog
             <td class="title">{{ $item -> title  }}</td>
             <td class="body">{{ $item -> body  }}</td>
             <td class="created">{{ $item -> created_at  }}</td>
+            <td class="updated">{{ $item -> updated_at  }}</td>
             <td class="action">
                 <a href="{{ route('posts.show', ['post' => $item -> id]) }}">
                     <button>View</button>
@@ -28,9 +30,14 @@ Blog
                 <a href="{{ route('posts.edit', ['post' => $item -> id]) }}">
                     <button>Edit</button>
                 </a>
-                <a href="">
+                <form action="{{ route('posts.destroy', ['post' => $item -> id]) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
                     <button>Delete</button>
-                </a>
+                </form>
+                
+                   
+                
             </td>
         </tr>     
         @endforeach
