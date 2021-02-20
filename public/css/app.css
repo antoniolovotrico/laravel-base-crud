@@ -112,6 +112,7 @@ body main form #input_body {
 }
 
 body main #create_btn {
+  width: 20%;
   padding: 10px;
 }
 

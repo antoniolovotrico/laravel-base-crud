@@ -25,7 +25,7 @@ Blog
                 <a href="{{ route('posts.show', ['post' => $item -> id]) }}">
                     <button>View</button>
                 </a>
-                <a href="">
+                <a href="{{ route('posts.edit', ['post' => $item -> id]) }}">
                     <button>Edit</button>
                 </a>
                 <a href="">
