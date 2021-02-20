@@ -11,7 +11,6 @@ Show Post
             <th class="title">Title</th>
             <th class="body">Body</th>
             <th class="created">Created</th>
-            <th class="action">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -20,14 +19,6 @@ Show Post
             <td class="title">{{ $post -> title  }}</td>
             <td class="body">{{ $post -> body  }}</td>
             <td class="created">{{ $post -> created_at  }}</td>
-            <td class="action">
-                <a href="">
-                    <button>Edit</button>
-                </a>
-                <a href="">
-                    <button>Delete</button>
-                </a>
-            </td>
         </tr>     
     </tbody>
 </table>
