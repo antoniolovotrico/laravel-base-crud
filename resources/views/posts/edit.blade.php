@@ -11,5 +11,6 @@ Show Post
             <input id="input_title" type="text" name="title" value="{{ $post -> title }}">
             <label for="body">Body</label>
             <textarea cols="30" rows="10" id="input_body" type="text" name="body">{{ $post -> body }}</textarea>
+            <button id="create_btn" type="submit">Edit</button>
         </form>
 @endsection
