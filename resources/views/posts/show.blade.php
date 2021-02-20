@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('title')
-Blog
+Show Post
 @endsection
 @section('content')
-<h1>Blog</h1>
+<h1>Show Post</h1>   
 <table>
     <thead>
         <tr>
@@ -15,16 +15,12 @@ Blog
         </tr>
     </thead>
     <tbody>
-        @foreach ($posts as $item)
         <tr>
-            <td class="id">{{ $item -> id  }}</td>
-            <td class="title">{{ $item -> title  }}</td>
-            <td class="body">{{ $item -> body  }}</td>
-            <td class="created">{{ $item -> created_at  }}</td>
+            <td class="id">{{ $post -> id  }}</td>
+            <td class="title">{{ $post -> title  }}</td>
+            <td class="body">{{ $post -> body  }}</td>
+            <td class="created">{{ $post -> created_at  }}</td>
             <td class="action">
-                <a href="{{ route('posts.show', ['post' => $item -> id]) }}">
-                    <button>View</button>
-                </a>
                 <a href="">
                     <button>Edit</button>
                 </a>
@@ -33,10 +29,6 @@ Blog
                 </a>
             </td>
         </tr>     
-        @endforeach
     </tbody>
 </table>
-        
-
-<a href="{{ route('posts.create') }}"><button id="create_btn">New Post</button></a>    
 @endsection
