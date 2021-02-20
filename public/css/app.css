@@ -10944,14 +10944,62 @@ a.text-dark:focus {
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  width: 100vw;
 }
 
-body div {
+body header {
+  width: 80%;
+  flex-basis: 10%;
+}
+
+body header ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+body header ul li {
+  width: 15%;
+}
+
+body main {
+  width: 80%;
+  flex-basis: 70%;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+}
+
+body main table {
+  width: 100%;
+  height: 100%;
+}
+
+body main table .id {
+  width: 5%;
+}
+
+body main table .title {
+  width: 15%;
+}
+
+body main table .body {
+  width: 60%;
+}
+
+body main table .created {
+  width: 20%;
 }
 

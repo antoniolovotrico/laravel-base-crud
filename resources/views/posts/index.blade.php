@@ -1,22 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <title>laravel-base-crud</title>
-    </head>
-    <body>
-        <h1>Blog</h1>
+@extends('layouts.app')
+@section('title')
+Blog
+@endsection
+@section('content')
+<h1>Blog</h1>
+<table>
+    <thead>
+        <tr>
+            <th class="id">ID</th>
+            <th class="title">Title</th>
+            <th class="body">Body</th>
+            <th class="created">Created</th>
+        </tr>
+    </thead>
+    <tbody>
         @foreach ($posts as $item)
-        <div>
-        <h2>{{ $item -> title  }}</h2>
-        <p>{{ $item -> body  }}</p>
-        <p>{{ $item -> created_at  }}</p>
-        </div>     
+        <tr>
+            <td class="id">{{ $item -> id  }}</td>
+            <td class="title">{{ $item -> title  }}</td>
+            <td class="body">{{ $item -> body  }}</td>
+            <td class="created">{{ $item -> created_at  }}</td>
+        </tr>     
         @endforeach
+    </tbody>
+</table>
+        
 
-        <a href="{{ route('posts.create') }}"><button>New Post</button></a>
-    </body>
-</html>
+<a href="{{ route('posts.create') }}"><button class="create_post">New Post</button></a>    
+@endsection
