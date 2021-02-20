@@ -14,8 +14,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-
+        // questo codice stampa tutti i post dal primo all'ultimo
+        // $posts = Post::all();
+        // questo codice stampa i post dall'ultimo al primo
+        $posts = Post::latest()->get();
         return view('posts.index', compact('posts'));
     }
 
@@ -37,7 +39,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        dd('ciao',$request);
+        $post = new Post;
+        $post -> title = request('title');
+        $post -> body = request('body');
+        $post -> save();
+
+        return redirect()-> route('posts.index');
     }
 
     /**

@@ -10950,3 +10950,8 @@ body {
   align-items: center;
 }
 
+body div {
+  display: flex;
+  flex-direction: column;
+}
+
